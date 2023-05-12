@@ -1,0 +1,422 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+1.
+\end_layout
+
+\begin_layout Standard
+(a) i, iii
+\end_layout
+
+\begin_layout Standard
+(b) i, iv
+\end_layout
+
+\begin_layout Standard
+(c) i, iii
+\end_layout
+
+\begin_layout Standard
+(d) ii
+\end_layout
+
+\begin_layout Standard
+2.
+\end_layout
+
+\begin_layout Standard
+(a).(1).
+\end_layout
+
+\begin_layout Standard
+For the same matrix A, and a different right side b'
+\end_layout
+
+\begin_layout Standard
+Ax = b'
+\end_layout
+
+\begin_layout Standard
+However, L*U = A.
+ So we do not need to solve L and U again
+\end_layout
+
+\begin_layout Standard
+So the only system we need to solve is LUx = b'
+\end_layout
+
+\begin_layout Standard
+(2).
+\end_layout
+
+\begin_layout Standard
+For a different matrix A
+\end_layout
+
+\begin_layout Standard
+A'x = b
+\end_layout
+
+\begin_layout Standard
+This time, A' = L' * U', so we need to find L' and U' first.
+\end_layout
+
+\begin_layout Standard
+Then, we also need to solve the system L'U'x = b
+\end_layout
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{2}=\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+\frac{1}{3} & 0 & 1 & 0\\
+-\frac{4}{3} & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $M_{2}a_{2}=\left[\begin{array}{c}
+3\\
+2\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+which satisties the requirement of the question
+\end_layout
+
+\begin_layout Standard
+(c)
+\end_layout
+
+\begin_layout Standard
+We have n*n matrix A and B, A is non-singular, and c
+\begin_inset Formula $\epsilon R^{n}$
+\end_inset
+
+, then we can know 
+\begin_inset Formula $A^{-1}Bc$
+\end_inset
+
+ is an n*1 matrix
+\end_layout
+
+\begin_layout Standard
+we can set 
+\begin_inset Formula $A^{-1}Bc=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $Bc=Ax$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the first thing we need to do is compute Bc, we can make Bc = y
+\end_layout
+
+\begin_layout Standard
+Then we use 
+\begin_inset Formula $Ax=y$
+\end_inset
+
+ (LU factorization) to get the answer of x
+\end_layout
+
+\begin_layout Standard
+3.
+\end_layout
+
+\begin_layout Standard
+(a)
+\end_layout
+
+\begin_layout Standard
+det A = 1*(4-3) + 1*(1-2) = 0
+\end_layout
+
+\begin_layout Standard
+so A is a singular matrix
+\end_layout
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\begin_layout Standard
+b = 
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & 4 & 6\end{array}\right]^{T}=\left[\begin{array}{c}
+2\\
+4\\
+6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Ax=b,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 1 & 0\\
+1 & 2 & 1\\
+1 & 3 & 2
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]=\left[\begin{array}{c}
+2\\
+4\\
+6
+\end{array}\right]\Longrightarrow\left[\begin{array}{ccc}
+1 & 1 & 0\\
+0 & 1 & 1\\
+0 & 0 & 0
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]=\left[\begin{array}{c}
+2\\
+2\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After calculating, we get 
+\begin_inset Formula $x_{1}+x_{2}=2,x_{2}+x_{3}=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rank(A)=Rank(A|B) = 2 <3
+\end_layout
+
+\begin_layout Standard
+So it has infinitely many solutions
+\end_layout
+
+\begin_layout Standard
+4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Vert Ax-b\Vert_{2}^{2}=(Ax-b)^{T}(Ax-b)=x^{T}A^{T}Ax-x^{T}A^{T}b-b^{T}Ax+b^{T}b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Vert A(x-x_{0})\Vert_{2}^{2}+\Vert Ax_{0}-b\Vert_{2}^{2}=(Ax-Ax_{0})^{T}(Ax-Ax_{0})+(Ax_{0}-b)^{T}(Ax_{0}-b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After calculating about it, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Vert A(x-x_{0})\Vert_{2}^{2}+\Vert Ax_{0}-b\Vert_{2}^{2}=x^{T}A^{T}Ax-x^{T}A^{T}b-b^{T}Ax+b^{T}b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is the same as 
+\begin_inset Formula $\Vert Ax-b\Vert_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then it is proved
+\end_layout
+
+\begin_layout Standard
+5.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cc}
+l_{11} & 0\\
+l_{21} & l_{22}
+\end{array}\right]\left[\begin{array}{cc}
+u_{11} & u_{12}\\
+0 & u_{22}
+\end{array}\right]=\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cc}
+l_{11}u_{11} & l_{11}u_{12}\\
+l_{21}u_{11} & l_{21}u_{12}+l_{22}u_{22}
+\end{array}\right]=\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $l_{11}u_{11}=0,l_{11}u_{12}=1,l_{21}u_{11}=1,l_{21}u_{12}+l_{22}u_{22}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+from the 1st equation, we know one of 
+\begin_inset Formula $l_{11},u_{11}$
+\end_inset
+
+is 0
+\end_layout
+
+\begin_layout Standard
+from the 2nd equation, we know 
+\begin_inset Formula $l_{11}$
+\end_inset
+
+can not be 0
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $u_{11}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+but in 3rd equation, we find 
+\begin_inset Formula $u_{11}$
+\end_inset
+
+can not be 0
+\end_layout
+
+\begin_layout Standard
+It is a contradiction.
+\end_layout
+
+\begin_layout Standard
+So A has no LU factorization
+\end_layout
+
+\end_body
+\end_document

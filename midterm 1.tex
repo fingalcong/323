@@ -1,0 +1,133 @@
+%% LyX 2.3.5.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+Yinfeng Cong
+
+netid: yc957
+
+CS 323 
+
+1. (a) ii, iii
+
+(b) iii
+
+(c) i
+
+(d) ii
+
+2. (a)
+
+The problem with the Vandermonde matrix is that when the dimensionality
+of the matrix gets higher and higher, the problem will become more
+and more ill-conditioned when solving linear equations, and the condition
+number will become larger and larger. And it is much simpler for Newton
+interpolation to calculate than the Vandermonde matrix method. For
+an incremental problem, Newton interpolation is also quicker and simpler.
+
+When computing higher-order interpolation, the error of Newton interpolation
+is bigger than Lagrange interpolation
+
+(b) NO, bisection search is like binary search in another class. Its
+mission is to find a root of it, and it is recursive to find the value
+between two numbers (a bigger one and a smaller one), and finally
+find the value we want to get. So it is not a fixed point method.
+
+(c) 1. because the basis matrix is a lower triangular, and it is much
+easier to list the triangular matrix than using Vandermonde matrix.
+And when we plug in the data and calculate the triangular matrix,
+we can directly get the answer easily. (We can calculate the answer
+easily, but for Vandermonde matrix it is much more complex)
+
+2. Also triangular matrix is easier to understand and write, we can
+devide it to lower triangular, x values, y values three parts, it
+is clearly easy to understand what we have here. However, we need
+to m{*}(n-1) numbers together in the matrix for Vandermonde matrix,
+it is much harder to understand from so many numbers.
+
+3. 
+
+We know that 
+\[
+x_{k+1}=g(x_{k})h(x_{k})
+\]
+
+and we also know that $g(x_{k}),h(x_{k})$are both guaranteed to converge
+in the same interval
+
+so there is a number x = m that makes $g'(m)=0$ and $h'(m)=0$
+
+From the hint we can get
+
+\[
+[g(m)h(m)]'=g(m)h'(m)+g'(m)h(m)=0+0=0
+\]
+
+so it also exhibit quadratic convergence
+
+4.
+
+Using Lagrange interpolation
+
+\[
+f(x)=\frac{(x+1)(x-2)(x-4)}{(-2+1)(-2-2)(-2-4)}*(-5)+\frac{(x+2)(x-2)(x-4)}{(-1+2)(-1-2)(-1-4)}*(-6)
+\]
+
+\[
++\frac{(x+2)(x+1)(x-4)}{(2+2)(2+1)(2-4)}*(-8)+\frac{(x+1)(x+2)(x-2)}{(4+1)(4+2)(4-2)}*(-4)=
+\]
+
+\[
+\frac{3x^{3}}{40}+\frac{19x^{2}}{120}-\frac{21x}{20}-\frac{107}{15}
+\]
+
+5.
+
+The iteration function g(x) for Newton\textquoteright s method is:
+
+\[
+g(x)=x-\frac{f(x)}{f'(x)}=x-\frac{x^{2}-5}{2x}=x-\frac{1}{2}x+\frac{5}{2x}
+\]
+
+\[
+g'(x)=\frac{1}{2}-\frac{5}{2x^{2}}
+\]
+
+The condition \textbar g'(x)\textbar{} \textless{} 1 is equivalently
+written as
+
+\[
+|\frac{1}{2}-\frac{5}{2x^{2}}|<1
+\]
+
+\[
+\Longrightarrow-1<\frac{1}{2}-\frac{5}{2x^{2}}<1
+\]
+
+\[
+\Longrightarrow-\frac{1}{2}<\frac{5}{2x^{2}}<\frac{3}{2}
+\]
+($\frac{5}{2x^{2}}is$ always bigger than $-\frac{1}{2}$, so we do
+not need to calculate about it any more)
+
+\[
+\Longrightarrow\frac{5}{x^{2}}<3\Longrightarrow3x^{2}>5\Longrightarrow x^{2}>\frac{5}{3}
+\]
+
+From the problem we know that we have the initial guess $x_{0}\geq2$,
+so $x^{2}$always $\geq4$
+
+which is also true for all x \textgreater{} $\frac{5}{3}$, indicating
+that g is a contraction in this case
+
+To make $f(a)=0$, we need to make $\frac{1}{2}-\frac{5}{2x^{2}}=0\Longrightarrow x^{2}=5$(bigger
+than 4 so it is ok) , then
+
+\[
+g'(a)=\frac{1}{2}-\frac{5}{2x^{2}}=\frac{1}{2}-\frac{5}{2*5}=0
+\]
+
+As a result, convergence has to be quadratic.
+\end{document}

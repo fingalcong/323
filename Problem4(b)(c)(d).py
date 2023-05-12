@@ -1,0 +1,10 @@
+import numpy as np
+a = np.array([[21.0,67.0,88.0,73.0], [76.0,63.0,7.0,20.0], [0.0,85.0,56.0,54.0], [19.3,43.0,30.2,29.4]])
+b = np.array([[141.0,109.0,218.0,93.7]])
+x = np.array([[-1],[2],[-3],[4]])
+print("r:")
+print(b - a.dot(x))
+print("z:")
+print((b-a.dot(x))/a)
+print("x+z:")
+print((b-a.dot(x))/a + x)
