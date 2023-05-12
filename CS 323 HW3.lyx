@@ -1,0 +1,380 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+1.
+ 
+\end_layout
+
+\begin_layout Standard
+(a).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $||x||_{\infty}=max_{1\leq i\leq n}\left\{ |x_{i}|\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $||x||_{1}=\sum_{i=1}^{n}|x_{i}|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we know 
+\begin_inset Formula $max_{1\leq i\leq n}\left\{ |x_{i}|\right\} \leq\sum_{i=1}^{n}|x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so we get 
+\begin_inset Formula $||x||_{\infty}\leq||x||_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n||x||_{\infty}=n*max_{1\leq i\leq n}\left\{ |x_{i}|\right\} =\sum_{i=1}^{n}max_{1\leq i\leq n}\left\{ |x_{i}|\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $\sum_{i=1}^{n}|x_{i}\leq\sum_{i=1}^{n}max_{1\leq i\leq n}\left\{ |x_{i}|\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so 
+\begin_inset Formula $||x||_{\infty}\leq||x||_{1}\leq n||x||_{\infty}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is also the same for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $||x||_{2}=\sqrt{x_{1}^{2}+x_{2}^{2}+...(max_{1\leq i\leq n}\left\{ |x_{i}|\right\} )^{2}+...x_{n}^{2}}\geq\sqrt{(max_{1\leq i\leq n}\left\{ |x_{i}|\right\} )^{2}}=||x||_{\infty}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $||x||_{2}=\sqrt{x_{1}^{2}+x_{2}^{2}+...(max_{1\leq i\leq n}\left\{ |x_{i}|\right\} )^{2}+...x_{n}^{2}}\leq\sqrt{\sum_{i=1}^{n}(max_{1\leq i\leq n}\left\{ |x_{i}|\right\} )^{2}}=\sqrt{n*(||x||_{\infty})^{2}}=\sqrt{n}||x||_{\infty}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so
+\begin_inset Formula $||x||_{\infty}\leq||x||_{2}\leq\sqrt{n}||x||_{\infty}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $||M||_{a}=max_{||x||_{a}=1}||Mx||_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $||M||_{b}=max_{||x||_{b}=1}||Mx||_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also from lecture we know that 
+\begin_inset Formula $||Mx||_{a}\leq||M||_{a}||x||_{a}$
+\end_inset
+
+, and 
+\begin_inset Formula $||Mx||_{b}\leq||x||_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $||M||_{a}=max_{||x||_{a}=1}||Mx||_{a}\leq max_{||x||_{a}=1}||M||_{a}||x||_{a}\leq\frac{1}{c_{1}}max_{||x||_{b}=1}||M||_{b}||x||_{b}$
+\end_inset
+
+ (From 
+\begin_inset Formula $c_{1}||x||_{a}≤||x||_{b}$
+\end_inset
+
+, we can get this, and of course 
+\begin_inset Formula $||M_{b}||\geq||M||_{a}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Then we can know 
+\begin_inset Formula $||M||_{a}\leq\frac{1}{c_{1}}||M||_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so there must be a positive constant d satisfy the equation
+\end_layout
+
+\begin_layout Standard
+Also
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|M||_{b}=max_{||x||_{b}=1}||Mx||_{b}\leq max_{||x||_{b}=1}||M||_{b}||x||_{b}\leq\frac{1}{c_{2}}max_{||x||_{a}=1}||M||_{a}||x||_{a}$
+\end_inset
+
+(From 
+\begin_inset Formula $c_{2}||x||_{a}\geq||x||_{b}$
+\end_inset
+
+, we can get this)
+\end_layout
+
+\begin_layout Standard
+Then we can know 
+\begin_inset Formula $d_{1}||M||_{a}\leq||M||_{b}\leq d_{2}||M||_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+\end_layout
+
+\begin_layout Standard
+(a).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1*1-(1+\varepsilon)(1-\varepsilon)=1-1+\varepsilon^{2}=\varepsilon^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b).
+\end_layout
+
+\begin_layout Standard
+To make determinant equals 0, we need to make 
+\begin_inset Formula $\varepsilon^{2}=0$
+\end_inset
+
+, which means that 
+\begin_inset Formula $\varepsilon=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c).
+\end_layout
+
+\begin_layout Standard
+A = LU = 
+\begin_inset Formula $\left[\begin{array}{cc}
+l_{11} & 0\\
+l_{21} & l_{22}
+\end{array}\right]\left[\begin{array}{cc}
+u_{11} & u_{12}\\
+0 & u_{22}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $l_{11}*u_{11}+0*0=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $l_{11}*u_{12}+0*u_{22}=1+\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $l_{21}*u_{11}+l_{22}*0=1-\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $l_{21}*u_{12}+l_{22}*u_{22}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $l_{11}=1,l_{21}=1-\varepsilon,l_{22}=1,u_{11}=1,u_{12}=1+\varepsilon,u_{22}=\varepsilon^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+1-\varepsilon & 1
+\end{array}\right],U=\left[\begin{array}{cc}
+1 & 1+\varepsilon\\
+0 & \varepsilon^{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(d).
+\end_layout
+
+\begin_layout Standard
+to make it singular, we need to make sure |u| = 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|u|=\varepsilon^{2}-0*(1+\varepsilon)=\varepsilon^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon^{2}=0,\varepsilon=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

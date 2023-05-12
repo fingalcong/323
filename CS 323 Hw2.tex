@@ -1,0 +1,271 @@
+%% LyX 2.3.5.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+1.
+
+\[
+p(t)=5t^{3}-3t^{2}+7t-2\Longrightarrow p(t)=-2+t(7+t(-3+5t))
+\]
+
+2. 
+
+(a)
+
+\[
+P_{n-1}(t)=a_{0}+a_{1}x+a_{2}^{2}+.....a_{n-1}x^{n-1}
+\]
+
+Using Horner\textquoteright s method
+
+\[
+P_{n-1}(t)=a_{0}+x(a_{1}+x(a_{2}+......x(a_{n-2}+xa_{n-1})...)))
+\]
+
+so we can easily find that it needs to multiply for $\left(n-1\right)$
+times
+
+(b)
+
+\[
+P(x)=y_{1}l_{1}(x)+y_{2}l_{2}(x)+\ldots+y_{n}l_{n}(x)
+\]
+
+it is also like this
+
+\[
+P_{n-1}(t)=y_{1}\frac{(x-x_{2})(x-x_{3})...(x-x_{n})}{(x_{1}-x_{2})(x_{1}-x_{3})...(x_{1}-x_{n})}+......y_{n}\frac{(x-x_{1})(x-x_{2})...(x-x_{n-1})}{(x_{n}-x_{1})(x_{n}-x_{2})...(x_{n}-x_{n-1})}
+\]
+ (the number should be written in t , sorry my bad)
+
+because only the molecular is unknown, so we can write it in such
+a copy
+
+\[
+y=(x-x_{2})(x-x_{3})...(x-x_{n})+......(x-x_{1})(x-x_{2})...(x-x_{n-1})
+\]
+
+so we can easily say that it needs $n^{n}times$ of multiplications
+
+(c)
+
+\[
+P_{n-1}(x)=a_{0}+a_{1}(x-x_{0})+a_{2}(x-x_{0})(x-x_{1})+...+a_{n-2}(x-x_{0})(x-x_{1})...(x-x_{n-2})
+\]
+
+Using Horner's method again
+
+\[
+P_{n-1}(t)=a_{0}+(t-t_{0})(a_{1}+(t-t_{1})(a_{2}+....(t-t_{n-3}(a_{n-2}+(t-t_{n-2})a_{n-1})...)))
+\]
+
+So as problem \#a we can know that it needs $\left(n-1\right)$ times
+of multiplications
+
+3. 
+
+(a)
+
+In general, there is a unique polynomial 
+
+\[
+P(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}
+\]
+
+Writing down the Vandermonde system for this data gives
+
+\[
+\left[\begin{array}{cccc}
+1 & 1 & 1 & 1\\
+1 & 2 & 4 & 8\\
+1 & 3 & 9 & 27\\
+1 & 4 & 16 & 64
+\end{array}\right]*\left[\begin{array}{c}
+a_{0}\\
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right]=\left[\begin{array}{c}
+11\\
+29\\
+65\\
+125
+\end{array}\right]
+\]
+
+Solving this system by Gaussian elimination yields the solution $\tilde{a}=\left(5,2,3,1\right)$so
+that the interpolating polynomial is
+
+\[
+P(x)=5+2x+3x^{2}+x^{3}
+\]
+
+(b)
+
+Using Lagrange interpolation
+
+\[
+P(x)=y_{0}\frac{(x-x_{1})(x-x_{2})(x-x_{3})}{(x_{0}-x_{1})(x_{0}-x_{2})(x_{0}-x_{3})}+y_{1}\frac{(x-x_{0})(x-x_{2})(x-x_{3})}{(x_{1}-x_{0})(x_{1}-x_{2})(x_{1}-x_{3})}
+\]
+
+\[
++y_{2}\frac{(x-x_{0})(x-x_{1})(x-x_{3})}{(x_{2}-x_{0})(x_{2}-x_{1})(x_{2}-x_{3})}+y_{3}\frac{(x-x_{0})(x-x_{1})(x-x_{2})}{(x_{3}-x_{0})(x_{3}-x_{1})(x_{3}-x_{2})}
+\]
+
+we plug in the data, we can also get the answer
+
+\[
+P(x)=11*\frac{(x-2)(x-3)(x-4)}{(1-2)(1-3)(1-4)}+29*\frac{(x-1)(x-3)(x-4)}{(2-1)(2-3)(2-4)}
+\]
+
+\[
++65*\frac{(x-1)(x-2)(x-4)}{(3-1)(3-2)(3-4)}+125*\frac{(x-1)(x-2)(x-3)}{(4-1)(4-2)(4-3)}
+\]
+
+then after we calculate the answer we can get $P(x)=5+2x+3x^{2}+x^{3}$
+
+It is the same as the answer in (a)
+
+(c)
+
+The matrix way:
+
+For the given data, this system becomes
+
+\[
+\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+1 & 1 & 0 & 0\\
+1 & 2 & 2 & 0\\
+1 & 3 & 6 & 6
+\end{array}\right]*\left[\begin{array}{c}
+a_{0}\\
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right]=\left[\begin{array}{c}
+11\\
+29\\
+65\\
+125
+\end{array}\right]
+\]
+
+whose solution is $\tilde{a}=(11,18,9,1)$. Thus, the interpolating
+polynomial is
+
+\[
+P(x)=11+(x-1)*18+(x-1)(x-2)*9+(x-1)(x-2)(x-3)=5+2x+3x^{2}+x^{3}
+\]
+
+The devided methods way:
+
+we need to calculate $\triangle,\triangle^{2}\triangle^{3}$for this
+question.
+
+$\triangle=\frac{29-11}{2-1}=18$, $\triangle_{2}=\frac{65-29}{1}=36$
+
+$\triangle^{2}=\frac{36-18}{2}=9$, $\triangle_{2}^{2}=\frac{60-36}{2}=12$
+
+$\triangle^{3}=\frac{12-9}{3}=1$
+
+we plug in the numbers again we can get the asnwer again
+
+\[
+P(x)=5+2x+3x^{2}+x^{3}
+\]
+
+I am not sure if it is correct because I did not see resource about
+this part, and I learned by myself about this part online
+
+The incremental interpolation way:
+
+\[
+y(x)=c_{0}N_{0}(x)+c_{1}N_{1}(x)+c_{2}N_{2}(x)+c_{3}N_{3}(x)
+\]
+
+\[
+c_{n}=\frac{y(t_{n})-y_{n-1}(t)}{\prod_{j=0}^{n-1}(t_{n}-t_{j})}
+\]
+
+Then we get 
+\[
+N_{n}(t)=\prod_{j=0}^{n-1}(x-x_{j})
+\]
+
+\[
+M_{n}(t)=c_{k}N_{k}(t)
+\]
+
+Then we try getting $y_{0}(t),y_{1}(t),y_{2}(t),$to finally get the
+answer $y(t)$
+
+\[
+y_{0}(t)=11
+\]
+
+\[
+y_{1}(t)=y_{0}(t)+M_{1}(t)=11+\frac{29-11}{1}(t-1)=-7+18t
+\]
+
+\[
+y_{2}(t)=y_{1}(t)+M_{2}(t)
+\]
+
+Then
+
+\[
+y(t)=y_{2}(t)+M_{3}(t)=y_{1}(t)+M_{2}(t)+M_{3}(t)=5+2t+3t^{2}+t^{3}
+\]
+
+Again as the part above, I am not sure if it is correct because I
+did not see resource about this part, and I learned by myself about
+this part online
+
+The answers are all the same as the answer in (a)
+
+4.
+
+(a)
+
+We have known that
+
+\[
+\pi(t)=(t-t_{1})(t-t_{2})...(t-t_{n})
+\]
+
+then we try calculating the derivative of equation
+
+\[
+\pi^{'}(t)=1*(t-t_{2})...(t-t_{n})+1*(t-t_{1})(t-t_{3})....(t-t_{n})+
+\]
+
+\[
+.....1*(t-t_{1})...(t-t_{j}-1)(t-t_{j}+1)...(t-t_{n})+1*(t-t_{1})...(t-t_{n-1})
+\]
+
+\[
+\pi'(t_{j})=0+0...+(t_{j}-t_{1})...(t_{j}-t_{j}-1)(t_{j}-t_{j}+1)...(t_{j}-t_{n})+0+0+.....
+\]
+
+which is the answer we need to prove
+
+(b)
+
+Using Lagrange interpolant
+
+\[
+l_{j}(t)=\frac{(t-t_{1})(t-t_{2})...(t-t_{j}-1)(t-t_{j}+1)...(t-t_{n})}{(t_{j}-t_{1})(t_{j}-t_{2})...(t_{j}-t_{j}-1)(t_{j}-t_{j}+1)...(t_{j}-t_{n})}
+\]
+
+\[
+\Longrightarrow=\frac{1}{t-t_{j}}*\frac{(t-t_{1})(t-t_{2})...(t-t_{j}-1)(t-t_{j})(t-t_{j}+1)...(t-t_{n})}{(t_{j}-t_{1})(t_{j}-t_{2})...(t_{j}-t_{j}-1)(t_{j}-t_{j}+1)...(t_{j}-t_{n})}
+\]
+
+\[
+\Longrightarrow=\frac{1}{t-t_{j}}*\frac{\pi(t)}{\pi'(t_{j})}=\frac{\pi(t)}{(t-t_{j})\pi'(t_{j})}
+\]
+
+\end{document}

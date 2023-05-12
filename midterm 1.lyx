@@ -1,0 +1,389 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Yinfeng Cong
+\end_layout
+
+\begin_layout Standard
+netid: yc957
+\end_layout
+
+\begin_layout Standard
+CS 323 
+\end_layout
+
+\begin_layout Standard
+1.
+ (a) ii, iii
+\end_layout
+
+\begin_layout Standard
+(b) iii
+\end_layout
+
+\begin_layout Standard
+(c) i
+\end_layout
+
+\begin_layout Standard
+(d) ii
+\end_layout
+
+\begin_layout Standard
+2.
+ (a)
+\end_layout
+
+\begin_layout Standard
+The problem with the Vandermonde matrix is that when the dimensionality
+ of the matrix gets higher and higher, the problem will become more and
+ more ill-conditioned when solving linear equations, and the condition number
+ will become larger and larger.
+ And it is much simpler for Newton interpolation to calculate than the Vandermon
+de matrix method.
+ For an incremental problem, Newton interpolation is also quicker and simpler.
+\end_layout
+
+\begin_layout Standard
+When computing higher-order interpolation, the error of Newton interpolation
+ is bigger than Lagrange interpolation
+\end_layout
+
+\begin_layout Standard
+(b) NO, bisection search is like binary search in another class.
+ Its mission is to find a root of it, and it is recursive to find the value
+ between two numbers (a bigger one and a smaller one), and finally find
+ the value we want to get.
+ So it is not a fixed point method.
+\end_layout
+
+\begin_layout Standard
+(c) 1.
+ because the basis matrix is a lower triangular, and it is much easier to
+ list the triangular matrix than using Vandermonde matrix.
+ And when we plug in the data and calculate the triangular matrix, we can
+ directly get the answer easily.
+ (We can calculate the answer easily, but for Vandermonde matrix it is much
+ more complex)
+\end_layout
+
+\begin_layout Standard
+2.
+ Also triangular matrix is easier to understand and write, we can devide
+ it to lower triangular, x values, y values three parts, it is clearly easy
+ to understand what we have here.
+ However, we need to m*(n-1) numbers together in the matrix for Vandermonde
+ matrix, it is much harder to understand from so many numbers.
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\end_layout
+
+\begin_layout Standard
+We know that 
+\begin_inset Formula 
+\[
+x_{k+1}=g(x_{k})h(x_{k})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and we also know that 
+\begin_inset Formula $g(x_{k}),h(x_{k})$
+\end_inset
+
+are both guaranteed to converge in the same interval
+\end_layout
+
+\begin_layout Standard
+so there is a number x = m that makes 
+\begin_inset Formula $g'(m)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $h'(m)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the hint we can get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[g(m)h(m)]'=g(m)h'(m)+g'(m)h(m)=0+0=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so it also exhibit quadratic convergence
+\end_layout
+
+\begin_layout Standard
+4.
+\end_layout
+
+\begin_layout Standard
+Using Lagrange interpolation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\frac{(x+1)(x-2)(x-4)}{(-2+1)(-2-2)(-2-4)}*(-5)+\frac{(x+2)(x-2)(x-4)}{(-1+2)(-1-2)(-1-4)}*(-6)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\frac{(x+2)(x+1)(x-4)}{(2+2)(2+1)(2-4)}*(-8)+\frac{(x+1)(x+2)(x-2)}{(4+1)(4+2)(4-2)}*(-4)=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{3x^{3}}{40}+\frac{19x^{2}}{120}-\frac{21x}{20}-\frac{107}{15}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+\end_layout
+
+\begin_layout Standard
+The iteration function g(x) for Newton’s method is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(x)=x-\frac{f(x)}{f'(x)}=x-\frac{x^{2}-5}{2x}=x-\frac{1}{2}x+\frac{5}{2x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g'(x)=\frac{1}{2}-\frac{5}{2x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The condition |g'(x)| < 1 is equivalently written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\frac{1}{2}-\frac{5}{2x^{2}}|<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Longrightarrow-1<\frac{1}{2}-\frac{5}{2x^{2}}<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Longrightarrow-\frac{1}{2}<\frac{5}{2x^{2}}<\frac{3}{2}
+\]
+
+\end_inset
+
+(
+\begin_inset Formula $\frac{5}{2x^{2}}is$
+\end_inset
+
+ always bigger than 
+\begin_inset Formula $-\frac{1}{2}$
+\end_inset
+
+, so we do not need to calculate about it any more)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Longrightarrow\frac{5}{x^{2}}<3\Longrightarrow3x^{2}>5\Longrightarrow x^{2}>\frac{5}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the problem we know that we have the initial guess 
+\begin_inset Formula $x_{0}\geq2$
+\end_inset
+
+, so 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+always 
+\begin_inset Formula $\geq4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is also true for all x > 
+\begin_inset Formula $\frac{5}{3}$
+\end_inset
+
+, indicating that g is a contraction in this case
+\end_layout
+
+\begin_layout Standard
+To make 
+\begin_inset Formula $f(a)=0$
+\end_inset
+
+, we need to make 
+\begin_inset Formula $\frac{1}{2}-\frac{5}{2x^{2}}=0\Longrightarrow x^{2}=5$
+\end_inset
+
+(bigger than 4 so it is ok) , then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g'(a)=\frac{1}{2}-\frac{5}{2x^{2}}=\frac{1}{2}-\frac{5}{2*5}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a result, convergence has to be quadratic.
+\end_layout
+
+\end_body
+\end_document

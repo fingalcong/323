@@ -1,0 +1,737 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(t)=5t^{3}-3t^{2}+7t-2\Longrightarrow p(t)=-2+t(7+t(-3+5t))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\end_layout
+
+\begin_layout Standard
+(a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{n-1}(t)=a_{0}+a_{1}x+a_{2}^{2}+.....a_{n-1}x^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using Horner’s method
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{n-1}(t)=a_{0}+x(a_{1}+x(a_{2}+......x(a_{n-2}+xa_{n-1})...)))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so we can easily find that it needs to multiply for 
+\begin_inset Formula $\left(n-1\right)$
+\end_inset
+
+ times
+\end_layout
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(x)=y_{1}l_{1}(x)+y_{2}l_{2}(x)+…+y_{n}l_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+it is also like this
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{n-1}(t)=y_{1}\frac{(x-x_{2})(x-x_{3})...(x-x_{n})}{(x_{1}-x_{2})(x_{1}-x_{3})...(x_{1}-x_{n})}+......y_{n}\frac{(x-x_{1})(x-x_{2})...(x-x_{n-1})}{(x_{n}-x_{1})(x_{n}-x_{2})...(x_{n}-x_{n-1})}
+\]
+
+\end_inset
+
+ (the number should be written in t , sorry my bad)
+\end_layout
+
+\begin_layout Standard
+because only the molecular is unknown, so we can write it in such a copy
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=(x-x_{2})(x-x_{3})...(x-x_{n})+......(x-x_{1})(x-x_{2})...(x-x_{n-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so we can easily say that it needs 
+\begin_inset Formula $n^{n}times$
+\end_inset
+
+ of multiplications
+\end_layout
+
+\begin_layout Standard
+(c)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{n-1}(x)=a_{0}+a_{1}(x−x_{0})+a_{2}(x−x_{0})(x−x_{1})+...+a_{n-2}(x−x_{0})(x−x_{1})...(x−x_{n-2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using Horner's method again
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{n-1}(t)=a_{0}+(t-t_{0})(a_{1}+(t-t_{1})(a_{2}+....(t-t_{n-3}(a_{n-2}+(t-t_{n-2})a_{n-1})...)))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So as problem #a we can know that it needs 
+\begin_inset Formula $\left(n-1\right)$
+\end_inset
+
+ times of multiplications
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\end_layout
+
+\begin_layout Standard
+(a)
+\end_layout
+
+\begin_layout Standard
+In general, there is a unique polynomial 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Writing down the Vandermonde system for this data gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 1 & 1 & 1\\
+1 & 2 & 4 & 8\\
+1 & 3 & 9 & 27\\
+1 & 4 & 16 & 64
+\end{array}\right]*\left[\begin{array}{c}
+a_{0}\\
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right]=\left[\begin{array}{c}
+11\\
+29\\
+65\\
+125
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving this system by Gaussian elimination yields the solution 
+\begin_inset Formula $\tilde{a}=\left(5,2,3,1\right)$
+\end_inset
+
+so that the interpolating polynomial is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(x)=5+2x+3x^{2}+x^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\begin_layout Standard
+Using Lagrange interpolation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(x)=y_{0}\frac{(x-x_{1})(x-x_{2})(x-x_{3})}{(x_{0}-x_{1})(x_{0}-x_{2})(x_{0}-x_{3})}+y_{1}\frac{(x-x_{0})(x-x_{2})(x-x_{3})}{(x_{1}-x_{0})(x_{1}-x_{2})(x_{1}-x_{3})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++y_{2}\frac{(x-x_{0})(x-x_{1})(x-x_{3})}{(x_{2}-x_{0})(x_{2}-x_{1})(x_{2}-x_{3})}+y_{3}\frac{(x-x_{0})(x-x_{1})(x-x_{2})}{(x_{3}-x_{0})(x_{3}-x_{1})(x_{3}-x_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we plug in the data, we can also get the answer
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+P(x)=11*\frac{(x-2)(x-3)(x-4)}{(1-2)(1-3)(1-4)}+29*\frac{(x-1)(x-3)(x-4)}{(2-1)(2-3)(2-4)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++65*\frac{(x-1)(x-2)(x-4)}{(3-1)(3-2)(3-4)}+125*\frac{(x-1)(x-2)(x-3)}{(4-1)(4-2)(4-3)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then after we calculate the answer we can get 
+\begin_inset Formula $P(x)=5+2x+3x^{2}+x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is the same as the answer in (a)
+\end_layout
+
+\begin_layout Standard
+(c)
+\end_layout
+
+\begin_layout Standard
+The matrix way:
+\end_layout
+
+\begin_layout Standard
+For the given data, this system becomes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+1 & 1 & 0 & 0\\
+1 & 2 & 2 & 0\\
+1 & 3 & 6 & 6
+\end{array}\right]*\left[\begin{array}{c}
+a_{0}\\
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right]=\left[\begin{array}{c}
+11\\
+29\\
+65\\
+125
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+whose solution is 
+\begin_inset Formula $\tilde{a}=(11,18,9,1)$
+\end_inset
+
+.
+ Thus, the interpolating polynomial is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(x)=11+(x-1)*18+(x-1)(x-2)*9+(x-1)(x-2)(x-3)=5+2x+3x^{2}+x^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The devided methods way:
+\end_layout
+
+\begin_layout Standard
+we need to calculate 
+\begin_inset Formula $\triangle,\triangle^{2}\triangle^{3}$
+\end_inset
+
+for this question.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\triangle=\frac{29-11}{2-1}=18$
+\end_inset
+
+, 
+\begin_inset Formula $\triangle_{2}=\frac{65-29}{1}=36$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\triangle^{2}=\frac{36-18}{2}=9$
+\end_inset
+
+, 
+\begin_inset Formula $\triangle_{2}^{2}=\frac{60-36}{2}=12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\triangle^{3}=\frac{12-9}{3}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we plug in the numbers again we can get the asnwer again
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(x)=5+2x+3x^{2}+x^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I am not sure if it is correct because I did not see resource about this
+ part, and I learned by myself about this part online
+\end_layout
+
+\begin_layout Standard
+The incremental interpolation way:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y(x)=c_{0}N_{0}(x)+c_{1}N_{1}(x)+c_{2}N_{2}(x)+c_{3}N_{3}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{n}=\frac{y(t_{n})-y_{n-1}(t)}{\prod_{j=0}^{n-1}(t_{n}-t_{j})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we get 
+\begin_inset Formula 
+\[
+N_{n}(t)=\prod_{j=0}^{n-1}(x-x_{j})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M_{n}(t)=c_{k}N_{k}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we try getting 
+\begin_inset Formula $y_{0}(t),y_{1}(t),y_{2}(t),$
+\end_inset
+
+to finally get the answer 
+\begin_inset Formula $y(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{0}(t)=11
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{1}(t)=y_{0}(t)+M_{1}(t)=11+\frac{29-11}{1}(t-1)=-7+18t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+y_{2}(t)=y_{1}(t)+M_{2}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y(t)=y_{2}(t)+M_{3}(t)=y_{1}(t)+M_{2}(t)+M_{3}(t)=5+2t+3t^{2}+t^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again as the part above, I am not sure if it is correct because I did not
+ see resource about this part, and I learned by myself about this part online
+\end_layout
+
+\begin_layout Standard
+The answers are all the same as the answer in (a)
+\end_layout
+
+\begin_layout Standard
+4.
+\end_layout
+
+\begin_layout Standard
+(a)
+\end_layout
+
+\begin_layout Standard
+We have known that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+π(t)=(t−t_{1})(t−t_{2})...(t−t_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then we try calculating the derivative of equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi^{'}(t)=1*(t-t_{2})...(t-t_{n})+1*(t-t_{1})(t-t_{3})....(t-t_{n})+
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+.....1*(t-t_{1})...(t-t_{j}-1)(t-t_{j}+1)...(t-t_{n})+1*(t-t_{1})...(t-t_{n-1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi'(t_{j})=0+0...+(t_{j}-t_{1})...(t_{j}-t_{j}-1)(t_{j}-t_{j}+1)...(t_{j}-t_{n})+0+0+.....
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is the answer we need to prove
+\end_layout
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\begin_layout Standard
+Using Lagrange interpolant
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+l_{j}(t)=\frac{(t-t_{1})(t-t_{2})...(t-t_{j}-1)(t-t_{j}+1)...(t-t_{n})}{(t_{j}-t_{1})(t_{j}-t_{2})...(t_{j}-t_{j}-1)(t_{j}-t_{j}+1)...(t_{j}-t_{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Longrightarrow=\frac{1}{t-t_{j}}*\frac{(t-t_{1})(t-t_{2})...(t-t_{j}-1)(t-t_{j})(t-t_{j}+1)...(t-t_{n})}{(t_{j}-t_{1})(t_{j}-t_{2})...(t_{j}-t_{j}-1)(t_{j}-t_{j}+1)...(t_{j}-t_{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Longrightarrow=\frac{1}{t-t_{j}}*\frac{\pi(t)}{\pi'(t_{j})}=\frac{\pi(t)}{(t-t_{j})\pi'(t_{j})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
